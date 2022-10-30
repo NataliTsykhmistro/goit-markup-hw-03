@@ -21,6 +21,16 @@
 /* вторичный цвет фона #F5F4FA */
 /* герой, футер цвет фона #2F303A */
 
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
 body {
     /* margin: 0; */
     color: var(--primary-text-color);
@@ -34,10 +44,24 @@ ul {
     list-style: none;
 }
 
+.list {
+    padding: 0;
+    margin: 0;
+}
+
 /* Logo шапка и футер*/
 
 .page-header {
     background-color: var(--title-text-color);
+    /* background-color: tomato; */
+}
+
+.container {
+    width: 1230px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+    outline: 2px solid teal;
 }
 
 .logo {
@@ -89,6 +113,8 @@ ul {
     line-height: 1.14;
     letter-spacing: 0.02em;
     text-decoration: none;
+    padding: 0;
+    margin: 0;
 }
 
 .contacts-mail,
@@ -109,6 +135,7 @@ ul {
 /* секция герой */
 .hero {
     background-color: var(--hero-footer-bg-color);
+    text-align: center;
     letter-spacing: 0.06em;
 }
 
@@ -117,7 +144,7 @@ ul {
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
-    text-align: center;
+    
     letter-spacing: 0.06em;
     text-transform: uppercase;
 }
@@ -125,6 +152,8 @@ ul {
 /* кнопки, фильтр*/
 
 .button {
+    display: inline-block;
+
     color: var(--primary-text-color);
     background-color: var(--primary-bg-color);
     font-family: inherit;
@@ -132,9 +161,16 @@ ul {
     font-size: 16px;
     line-height: 1.63;
     text-align: center;
+
 }
 
 .button.primary {
+    display: inline-block;
+    min-width: 216px;
+    border-radius: 4px;
+    padding: 10px 32px;
+    
+
     color: var(--title-text-color);
     background-color: var(--accent-color);
     font-weight: 700;
