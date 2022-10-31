@@ -8,6 +8,8 @@
     --primary-bg-color: #FFFFFF;
     --secondary-bg-color: #F5F4FA;
     --hero-footer-bg-color: #2F303A;
+    --border-color: #ECECEC;
+    --border-sites: #EEEEEE;
 }   
 
 /* цвет основого текста #212121 */
@@ -20,16 +22,18 @@
 /* осн цвет фона #F5F5F5 */
 /* вторичный цвет фона #F5F4FA */
 /* герой, футер цвет фона #2F303A */
+/* граница в хедере цвет #ECECEC */
+/* граница на сайте цвет #EEEEEE */
 
 html {
     box-sizing: border-box;
 }
 
-*,
+/* *,
 *::before,
 *::after {
     box-sizing: inherit;
-}
+} */
 
 body {
     /* margin: 0; */
@@ -42,6 +46,8 @@ body {
 
 ul {
     list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 .list {
@@ -53,7 +59,7 @@ ul {
 
 .page-header {
     background-color: var(--title-text-color);
-    /* background-color: tomato; */
+    border-bottom: 1px solid var(--border-color);
 }
 
 .container {
@@ -108,13 +114,15 @@ ul {
 /* контакты шапка и футер */
 
 .social-links a {
+    padding: 0;
+    margin: 0;
+
     color: var(--secondary-text-color);
     font-weight: 500;
     line-height: 1.14;
     letter-spacing: 0.02em;
     text-decoration: none;
-    padding: 0;
-    margin: 0;
+
 }
 
 .contacts-mail,
@@ -140,6 +148,9 @@ ul {
 }
 
 .hero-title {
+    margin-top: 0;
+    margin-bottom: 30px;
+
     color: var(--title-text-color);
     font-weight: 900;
     font-size: 44px;
@@ -177,7 +188,7 @@ ul {
     font-size: 16px;
     line-height: 1.88;
     /* align-items: center; */
-    text-align: center;
+
 }
 
 .button:hover,
@@ -188,11 +199,19 @@ ul {
 
 /* секции */
 
+.section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
 .section-team {
     background-color: var(--secondary-bg-color);
 }
 
 .section-title {
+    margin-top: 0;
+    margin-bottom: 50px;
+    
     color: var(--primary-text-color);
     font-weight: 700;
     font-size: 36px;
@@ -203,18 +222,33 @@ ul {
 /* секция: команда, особенности; в портфолио:
  сайты*/
 
+.features, 
+.work {
+    
+}
+
 .features .title {
+    margin-top: 0;
+    margin-bottom: 10px;
+    
+
     color: var(--primary-text-color);
     font-weight: 700;
     line-height: 1.14;
 }
 
 .features .item {
+    margin-top: 0;
+    margin-bottom: 0;
+
     color: var(--secondary-text-color);
     line-height: 1.71;
 }
 
 .team .title {
+    margin-top: 30px;
+    margin-bottom: 10px;
+
     color: var(--primary-text-color);
     font-weight: 500;
     font-size: 16px;
@@ -223,6 +257,10 @@ ul {
 }
 
  .team .item {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-bottom: 30px;
+    
     color: var(--secondary-text-color);
     font-size: 16px;
     line-height: 1.19;
@@ -241,6 +279,13 @@ ul {
     color: var(--secondary-text-color);
     font-size: 16px;
     line-height: 1.88;
+    border-bottom: 1px solid var(--border-sites);
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
 
 /* футер */
