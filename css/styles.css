@@ -55,7 +55,8 @@ ul {
     margin: 0;
 }
 
-/* Logo шапка и футер*/
+
+/* Logo шапка */
 
 .page-header {
     background-color: var(--title-text-color);
@@ -71,7 +72,15 @@ ul {
     outline: 2px solid teal;
 }
 
+.main-nav {
+    display: flex;
+}
+
 .logo {
+    margin-right: 93px;
+    padding-top: 24px;
+    padding-bottom: 25px;
+
     color: var(--logo-accent-color);
 }
 
@@ -95,7 +104,19 @@ ul {
 
 /* Site nav */
 
+.site-nav {
+    display: flex;
+}
+
+.site-nav .item:not(:last-child) {
+    margin-right: 50px;
+}
+
 .site-nav .link {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
     color: var(--primary-text-color);
     font-weight: 500;
     line-height: 1.14;
@@ -112,7 +133,15 @@ ul {
     color: var(--accent-color);
 }
 
-/* контакты шапка и футер */
+/* контакты шапка */
+
+.social-links {
+    display: flex;
+}
+
+.social-links .item:not(:last-child) {
+    margin-right: 50px;
+}
 
 .social-links a {
     padding: 0;
@@ -124,6 +153,11 @@ ul {
     letter-spacing: 0.02em;
     text-decoration: none;
 
+}
+
+.social-links .item {
+    padding-top: 32px;
+    padding-bottom: 32px;
 }
 
 .contacts-mail,
@@ -221,6 +255,12 @@ ul {
     text-align: center;
 }
 
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
 /* секция: команда, особенности; в портфолио:
  сайты*/
 
@@ -231,6 +271,12 @@ ul {
 
 .features-list {
     width: 270px;
+    margin-right: 30px;
+    margin-bottom: 0;
+}
+
+.features-list:nth-child(4n) {
+    margin-right: 0;
 }
 
 .features .title {
@@ -251,9 +297,25 @@ ul {
     line-height: 1.71;
 }
 
+.team {
+    display: flex;
+}
+
+.team-list {
+    width: 270px;
+    margin-right: 30px;
+    margin-bottom: 0;
+}
+
+.team-list:nth-child(4n) {
+    margin-right: 0;
+}
+
 .team .title {
-    margin-top: 30px;
-    margin-bottom: 10px;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 30px;
+    padding-bottom: 10px;
 
     color: var(--primary-text-color);
     font-weight: 500;
@@ -265,7 +327,8 @@ ul {
  .team .item {
     margin-top: 0;
     margin-bottom: 0;
-    padding-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 30px;
     
     color: var(--secondary-text-color);
     font-size: 16px;
@@ -288,7 +351,10 @@ ul {
 
 .sites-list:nth-child(3n) {
     margin-right: 0;
+}
 
+.sites-list:nth-last-child(-n + 3) {
+    margin-bottom: 0;
 }
 
 .sites-title {
@@ -307,13 +373,6 @@ ul {
     color: var(--secondary-text-color);
     font-size: 16px;
     line-height: 1.88;
-    
-}
-
-img {
-    display: block;
-    max-width: 100%;
-    height: auto;
 }
 
 /* футер */
