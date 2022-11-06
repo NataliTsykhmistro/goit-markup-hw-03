@@ -44,6 +44,17 @@ body {
     letter-spacing: 0.03em;
 }
 
+/* Утилиты */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
 ul {
     list-style: none;
     padding: 0;
@@ -69,11 +80,12 @@ ul {
     padding-right: 15px;
     margin-left: auto;
     margin-right: auto;
-    outline: 2px solid teal;
+    /* outline: 2px solid teal; */
 }
 
 .main-nav {
     display: flex;
+    align-items: center;
 }
 
 .logo {
@@ -85,10 +97,13 @@ ul {
 }
 
 .logo-footer {
+    margin-top: 60px;
+
     color: var(--title-text-color);
 }
 
 .logo-span {
+    
     color: var(--accent-color);
 }
 
@@ -135,8 +150,9 @@ ul {
 
 /* контакты шапка */
 
-.social-links {
+.main-links {
     display: flex;
+    
 }
 
 .social-links .item:not(:last-child) {
@@ -195,27 +211,48 @@ ul {
     text-transform: uppercase;
 }
 
+/* Навигация кнопки в Портфолио */
+
+.nav-buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.list-button {
+    margin-bottom: 50px;
+
+}
+
+.nav-buttons .list-button:not(:last-child) {
+    margin-right: 8px;
+}
+
 /* кнопки, фильтр*/
 
 .button {
     display: inline-block;
+    padding: 6px 22px;
 
     color: var(--primary-text-color);
-    background-color: var(--primary-bg-color);
+    background-color: var(--secondary-bg-color);
     font-family: inherit;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.63;
+    border-radius: 4px;
+    border: none;
     text-align: center;
 
 }
 
 .button.primary {
     display: inline-block;
+    padding: 10px 32px;
+
     min-width: 216px;
     border-radius: 4px;
     border: none;
-    padding: 10px 32px;
+    
     
 
     color: var(--title-text-color);
@@ -257,8 +294,18 @@ ul {
 
 img {
     display: block;
+    margin-bottom: 0;
+    
     max-width: 100%;
     height: auto;
+}
+
+.work {
+    display: flex;
+}
+
+.work .item:not(:last-child) {
+    margin-right: 30px;
 }
 
 /* секция: команда, особенности; в портфолио:
@@ -388,7 +435,13 @@ img {
     text-decoration: none;
 }
 
+.footer-address {
+    margin-top: 20px;
+}
+
 .footer-contacts {
+    margin-top: 9px;
+
     color:var(--footer-mail-text-color);
     font-style: normal;
     line-height: 1.71;
