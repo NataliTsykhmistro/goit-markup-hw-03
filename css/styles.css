@@ -10,6 +10,7 @@
     --hero-footer-bg-color: #2F303A;
     --border-color: #ECECEC;
     --border-sites: #EEEEEE;
+    --card-sites-gap: 30px;
 }   
 
 /* цвет основого текста #212121 */
@@ -51,7 +52,8 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6, 
+p {
     margin: 0;
 }
 
@@ -80,10 +82,15 @@ ul {
     padding-right: 15px;
     margin-left: auto;
     margin-right: auto;
-    /* outline: 2px solid teal; */
+    outline: 2px solid teal;
 }
 
 .main-nav {
+    display: flex;
+    
+}
+
+.nav-list {
     display: flex;
     align-items: center;
 }
@@ -128,7 +135,7 @@ ul {
 }
 
 .site-nav .link {
-    display: block;
+    
     padding-top: 32px;
     padding-bottom: 32px;
 
@@ -150,9 +157,9 @@ ul {
 
 /* контакты шапка */
 
-.main-links {
+.social-links {
     display: flex;
-    
+    margin-left: auto;
 }
 
 .social-links .item:not(:last-child) {
@@ -193,13 +200,16 @@ ul {
 
 /* секция герой */
 .hero {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    
     background-color: var(--hero-footer-bg-color);
     text-align: center;
     letter-spacing: 0.06em;
 }
 
 .hero-title {
-    margin-top: 0;
+
     margin-bottom: 30px;
 
     color: var(--title-text-color);
@@ -277,7 +287,13 @@ ul {
     padding-bottom: 0;
 }
 
+.section-work, 
+.section-projects {
+    margin-bottom: 94px;
+}
+
 .section-team {
+
     background-color: var(--secondary-bg-color);
 }
 
@@ -302,6 +318,7 @@ img {
 
 .work {
     display: flex;
+    
 }
 
 .work .item:not(:last-child) {
@@ -329,6 +346,8 @@ img {
 .features .title {
     margin-top: 0;
     margin-bottom: 10px;
+    text-transform: uppercase;
+
     
 
     color: var(--primary-text-color);
@@ -358,12 +377,18 @@ img {
     margin-right: 0;
 }
 
+.team-title {
+    background-color: var(--primary-bg-color);
+
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
 .team .title {
     margin-top: 0;
-    margin-bottom: 0;
-    padding-top: 30px;
-    padding-bottom: 10px;
-
+    margin-bottom: 10px;
+    
+    
     color: var(--primary-text-color);
     font-weight: 500;
     font-size: 16px;
@@ -375,7 +400,7 @@ img {
     margin-top: 0;
     margin-bottom: 0;
     padding-top: 0;
-    padding-bottom: 30px;
+    padding-bottom: 0;
     
     color: var(--secondary-text-color);
     font-size: 16px;
@@ -387,7 +412,23 @@ img {
 .sites {
     display: flex;
     flex-wrap: wrap;
+    margin-bottom: 94px;
+
+    /* margin-left: calc(-1 * var(--card-sites-gap));
+    margin-top: calc(-1 * var(--card-sites-gap)); */
+
 }
+
+.sites > .sites-list {
+    /* flex-basis: calc(100% / 3 - var(--card-sites-gap)); */
+}
+
+/* .sites-list {
+    flex-basis: calc(100% / 3 - var(--card-sites-gap));
+    margin-left: var(--card-sites-gap);
+    margin-top: var(--card-sites-gap);
+    border: 1px solid var(--border-sites);
+} */
 
 .sites-list {
     width: 370px;
@@ -425,6 +466,9 @@ img {
 /* футер */
 
 .footer {
+    padding-top: 60px;
+    padding-bottom: 60px;
+
     background-color: var(--hero-footer-bg-color);
 }
 
@@ -440,9 +484,15 @@ img {
 }
 
 .footer-contacts {
+    display: block;
     margin-top: 9px;
 
     color:var(--footer-mail-text-color);
     font-style: normal;
     line-height: 1.71;
-}   
+}  
+
+.contacts {
+    margin-top: 9px;
+    margin-bottom: 9px;
+}
