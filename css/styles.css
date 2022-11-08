@@ -82,7 +82,7 @@ ul {
     padding-right: 15px;
     margin-left: auto;
     margin-right: auto;
-    outline: 2px solid teal;
+    /* outline: 2px solid teal; */
 }
 
 .main-nav {
@@ -124,7 +124,7 @@ ul {
     text-decoration: none;
 }
 
-/* Site nav */
+/* Site nav хедер */
 
 .site-nav {
     display: flex;
@@ -284,13 +284,13 @@ ul {
 
 .section {
     padding-top: 94px;
-    padding-bottom: 0;
+    padding-bottom: 94px;
 }
 
-.section-work, 
-.section-projects {
-    margin-bottom: 94px;
+.section-work {
+    padding-top: 0;
 }
+
 
 .section-team {
 
@@ -306,6 +306,13 @@ ul {
     font-size: 36px;
     line-height: 1.17;
     text-align: center;
+}
+/* Скрыть заголовки */
+
+.feature-title, 
+.portfolio-title {
+    visibility: hidden;
+    margin-bottom: 0;
 }
 
 img {
@@ -412,25 +419,19 @@ img {
 .sites {
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 94px;
-
-    /* margin-left: calc(-1 * var(--card-sites-gap));
-    margin-top: calc(-1 * var(--card-sites-gap)); */
-
+    
+    margin-left: calc( -1 * var(--card-sites-gap));
+    margin-top: calc( -1 * var(--card-sites-gap));
 }
 
-.sites > .sites-list {
-    /* flex-basis: calc(100% / 3 - var(--card-sites-gap)); */
-}
-
-/* .sites-list {
+.sites-list {
     flex-basis: calc(100% / 3 - var(--card-sites-gap));
     margin-left: var(--card-sites-gap);
     margin-top: var(--card-sites-gap);
     border: 1px solid var(--border-sites);
-} */
+}
 
-.sites-list {
+/* .sites-list {
     width: 370px;
     margin-right: 30px;
     margin-bottom: 30px;
@@ -443,7 +444,7 @@ img {
 
 .sites-list:nth-last-child(-n + 3) {
     margin-bottom: 0;
-}
+} */
 
 .sites-title {
     padding: 20px 24px;
