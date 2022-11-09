@@ -68,7 +68,6 @@ ul {
     margin: 0;
 }
 
-
 /* Logo шапка */
 
 .page-header {
@@ -226,11 +225,7 @@ ul {
 .nav-buttons {
     display: flex;
     justify-content: center;
-}
-
-.list-button {
     margin-bottom: 50px;
-
 }
 
 .nav-buttons .list-button:not(:last-child) {
@@ -353,6 +348,8 @@ img {
 .features .title {
     margin-top: 0;
     margin-bottom: 10px;
+
+    font-size: 14px;
     text-transform: uppercase;
 
     
@@ -419,15 +416,16 @@ img {
 .sites {
     display: flex;
     flex-wrap: wrap;
-    
-    margin-left: calc( -1 * var(--card-sites-gap));
-    margin-top: calc( -1 * var(--card-sites-gap));
+    gap: var(--card-sites-gap);
+        
+    /* margin-left: calc( -1 * var(--card-sites-gap));
+    margin-top: calc( -1 * var(--card-sites-gap)); */
 }
 
 .sites-list {
-    flex-basis: calc(100% / 3 - var(--card-sites-gap));
-    margin-left: var(--card-sites-gap);
-    margin-top: var(--card-sites-gap);
+    flex-basis: calc((100% - 2 * var(--card-sites-gap))/ 3 );
+    /* margin-left: var(--card-sites-gap);
+    margin-top: var(--card-sites-gap); */
     border: 1px solid var(--border-sites);
 }
 
